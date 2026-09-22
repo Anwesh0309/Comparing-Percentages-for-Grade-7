@@ -8,11 +8,12 @@ export const HomeScreen = () => {
   const { setStage } = useAppStore();
 
   useEffect(() => {
-    soundEngine.playText(narrationScript.home_intro);
+    // Audio disabled for intro phase
+    return () => soundEngine.stop();
   }, []);
 
   const handleMascotSpeak = () => {
-    soundEngine.playText(narrationScript.home_intro);
+    // Audio disabled for intro phase
   };
 
   return (

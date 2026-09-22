@@ -20,6 +20,7 @@ export const ReflectStage = () => {
 
   useEffect(() => {
     soundEngine.playText(narrationScript.reflect_intro);
+    return () => soundEngine.stop();
   }, []);
 
   const handleTopicClick = (index) => {

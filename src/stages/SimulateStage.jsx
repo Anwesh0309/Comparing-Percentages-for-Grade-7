@@ -30,6 +30,7 @@ export const SimulateStage = () => {
 
   useEffect(() => {
     soundEngine.playText(stationNarrationMap[simulateStation]);
+    return () => soundEngine.stop();
   }, [simulateStation]);
 
   const handleMascotSpeak = () => {
